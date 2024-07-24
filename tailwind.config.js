@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily:{
-        sans:['Nunito', 'sans-serif']
+      fontFamily: {
+        sans: ['Nunito', 'sans-serif'],
       },
-      colors:{
+      colors: {
         'blue-charcoal-950': '#040F1A',
         'blue-charcoal-900': '#071422',
         'blue-charcoal-800': '#0B1B2B',
@@ -21,9 +18,8 @@ export default {
         'blue-charcoal-200': '#C4D4E3',
         'blue-charcoal-100': '#E7EDF4',
         'blue-highlight': '#3294F8',
-      }
+      },
     },
   },
   plugins: [],
 }
-
