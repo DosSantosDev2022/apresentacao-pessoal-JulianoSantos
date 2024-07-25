@@ -1,6 +1,8 @@
 import { IconType } from 'react-icons'
 import { FaGithub, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import { v4 as uuid } from 'uuid'
+import portImage from './assets/port.webp'
+import blogImage from './assets/blog.webp'
 
 interface Link {
   id: string
@@ -77,35 +79,27 @@ export const data: Data = {
     projects: [
       {
         id: uuid(),
-        name: 'Projeto 1',
-        coverImage: 'https://via.placeholder.com/300.png/09f/fff',
+        name: 'Portifólio',
+        coverImage: portImage,
         description:
-          'Este é um projeto incrível que utiliza React e Tailwind CSS para criar uma interface de usuário moderna e responsiva.',
-        viewUrl: 'https://github.com/DosSantosDev2022/projeto1',
+          'Este é o principal canal para conhecer mais sobre meu trabalho, incluindo projetos importantes que destacam minha experiência e habilidades.',
+        viewUrl: 'https://dossantosdev.vercel.app/',
       },
       {
         id: uuid(),
-        name: 'Projeto 2',
-        coverImage: 'https://via.placeholder.com/300.png/09f/fff',
+        name: 'Blog Dev',
+        coverImage: blogImage,
         description:
-          'Este é um projeto incrível que utiliza React e Tailwind CSS para criar uma interface de usuário moderna e responsiva.',
-        viewUrl: 'https://github.com/DosSantosDev2022/projeto1',
+          'Explore o BlogDev, um blog dinâmico em Next.js com artigos práticos e envolventes, projetados para programadores.',
+        viewUrl: 'https://dossantosdev.vercel.app/Project/blog-dev',
       },
       {
         id: uuid(),
-        name: 'Projeto 3',
+        name: 'UIChroma',
         coverImage: 'https://via.placeholder.com/300.png/09f/fff',
         description:
-          'Este é um projeto incrível que utiliza React e Tailwind CSS para criar uma interface de usuário moderna e responsiva.',
-        viewUrl: 'https://github.com/DosSantosDev2022/projeto1',
-      },
-      {
-        id: uuid(),
-        name: 'Projeto 4',
-        coverImage: 'https://via.placeholder.com/300.png/09f/fff',
-        description:
-          'Este é um projeto incrível que utiliza React e Tailwind CSS para criar uma interface de usuário moderna e responsiva.',
-        viewUrl: 'https://github.com/DosSantosDev2022/projeto1',
+          'A Biblioteca UIChroma oferece componentes ReactJS para facilitar o desenvolvimento de interfaces, focando na praticidade e personalização.',
+        viewUrl: 'https://dossantosdev.vercel.app/Project/projetouichroma',
       },
     ],
   },
