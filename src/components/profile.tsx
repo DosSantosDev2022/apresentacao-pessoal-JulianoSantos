@@ -14,7 +14,8 @@ export function Profile() {
         <div className="flex items-center justify-between w-full mb-2">
           <h1 className="font-bold text-2xl">{data.page.profile.name}</h1>
           <a
-            href=""
+            target="_blank"
+            href="https://dossantosdev.vercel.app/"
             className="uppercase text-xs hover:text-blue-highlight/60 duration-300 transition-all font-bold text-blue-highlight flex items-center gap-1"
           >
             Portifólio
