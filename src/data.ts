@@ -1,8 +1,25 @@
 import { IconType } from 'react-icons'
-import { FaGithub, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
+import {
+  FaGithub,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaReact,
+  FaJsSquare,
+  FaDocker,
+} from 'react-icons/fa'
 import { v4 as uuid } from 'uuid'
 import portImage from './assets/port.webp'
 import blogImage from './assets/blog.webp'
+import UiImage from './assets/Ui.webp'
+
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiPostgresql,
+  SiSass,
+} from 'react-icons/si'
 
 interface Link {
   id: string
@@ -26,6 +43,12 @@ interface Projects {
   viewUrl: string
 }
 
+interface Tech {
+  name: string
+  description: string
+  icon: IconType
+}
+
 interface Page {
   profile: Profile
   description: {
@@ -34,6 +57,7 @@ interface Page {
     paragraph03: string
   }
   projects: Projects[]
+  techs: Tech[]
 }
 
 interface Data {
@@ -96,10 +120,66 @@ export const data: Data = {
       {
         id: uuid(),
         name: 'UIChroma',
-        coverImage: 'https://via.placeholder.com/300.png/09f/fff',
+        coverImage: UiImage,
         description:
           'A Biblioteca UIChroma oferece componentes ReactJS para facilitar o desenvolvimento de interfaces, focando na praticidade e personalização.',
         viewUrl: 'https://dossantosdev.vercel.app/Project/projetouichroma',
+      },
+    ],
+    techs: [
+      {
+        name: 'React',
+        description:
+          'Experiência sólida na criação de interfaces de usuário dinâmicas e reutilizáveis, utilizando componentes e hooks',
+        icon: FaReact,
+      },
+      {
+        name: 'Next.js',
+        description:
+          'Habilidade em desenvolver aplicações server-side renderizadas e estáticas, aproveitando a performance e os recursos de SEO',
+        icon: SiNextdotjs,
+      },
+      {
+        name: 'JavaScript',
+        description:
+          'Proficiência em programação assíncrona, manipulação de DOM e desenvolvimento de funcionalidades interativas',
+        icon: FaJsSquare,
+      },
+      {
+        name: 'TypeScript',
+        description:
+          'Forte conhecimento em tipagem estática e orientação a objetos, garantindo código mais robusto e menos propenso a erros',
+        icon: SiTypescript,
+      },
+      {
+        name: 'Tailwind CSS',
+        description:
+          'Experiência em estilização rápida e eficiente de interfaces com classes utilitárias, proporcionando design responsivo e moderno',
+        icon: SiTailwindcss,
+      },
+      {
+        name: 'SCSS',
+        description:
+          'Capacidade de escrever CSS modular e reutilizável, utilizando variáveis, mixins e aninhamento para melhorar a manutenção do código',
+        icon: SiSass,
+      },
+      {
+        name: 'Prisma',
+        description:
+          'Conhecimento na modelagem de dados e integração com bancos de dados, facilitando consultas e operações complexas',
+        icon: SiPrisma,
+      },
+      {
+        name: 'PostgreSQL',
+        description:
+          'Experiência em design e gerenciamento de banco de dados relacional, otimização de consultas e manutenção de integridade dos dados',
+        icon: SiPostgresql,
+      },
+      {
+        name: 'Docker',
+        description:
+          'Habilidade em containerização de aplicações, garantindo ambientes de desenvolvimento consistentes e facilitando a implantação',
+        icon: FaDocker,
       },
     ],
   },
