@@ -8,7 +8,7 @@ export function Profile() {
       <img
         src={data.page.profile.image}
         alt=""
-        className="rounded-md lg:w-[148px] w-full h-full lg:h-[148px] "
+        className="rounded-md lg:w-[196px] w-full h-full lg:h-[196px] "
       />
       <div className="flex flex-col  w-full">
         <div className="flex items-center justify-between w-full mb-2">

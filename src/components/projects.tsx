@@ -3,20 +3,22 @@ import { data } from '../data'
 
 export function Projects() {
   return (
-    <div className="w-full p-4">
+    <div className="w-full ">
       <div className="w-full mb-4 px-2 py-3">
-        <h5 className="text-4xl font-bold">Conheça os meus projetos</h5>
+        <h5 className=" text-3xl lg:text-4xl font-bold">
+          Conheça os meus projetos
+        </h5>
       </div>
 
       <div className="grid grid-cols-3 justify-center gap-6 w-full">
         {data.page.projects.map((project) => (
           <div
             key={project.id}
-            className="max-w-lg h-[390px] col-span-3 lg:col-span-1 rounded-lg shadow  bg-blue-charcoal-800"
+            className=" h-[410px] col-span-3 lg:col-span-1 rounded-lg shadow  bg-blue-charcoal-800"
           >
             <a href={project.viewUrl}>
               <img
-                className="rounded-t-lg w-full h-[160px] "
+                className="rounded-t-lg w-full h-[180px] "
                 src={project.coverImage}
                 alt=""
               />
