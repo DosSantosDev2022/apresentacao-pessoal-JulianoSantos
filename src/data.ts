@@ -5,7 +5,6 @@ import {
   FaLinkedin,
   FaReact,
   FaJsSquare,
-  FaDocker,
 } from 'react-icons/fa'
 import { v4 as uuid } from 'uuid'
 import portImage from './assets/port.webp'
@@ -17,7 +16,6 @@ import {
   SiTypescript,
   SiTailwindcss,
   SiPrisma,
-  SiPostgresql,
   SiSass,
 } from 'react-icons/si'
 
@@ -52,10 +50,9 @@ interface Tech {
 interface Page {
   profile: Profile
   description: {
-    paragraph01: string
-    paragraph02: string
-    paragraph03: string
-  }
+    id: string
+    paragraph: string
+  }[]
   projects: Projects[]
   techs: Tech[]
 }
@@ -92,14 +89,23 @@ export const data: Data = {
         },
       ],
     },
-    description: {
-      paragraph01:
-        'Olá! Sou um apaixonado desenvolvedor Front-End com experiência robusta em diversas tecnologias modernas da web. Minha jornada no mundo da programação começou com uma paixão pelo front-end, e ao longo dos anos, expandi meu conhecimento para abranger também o back-end, tornando-me um desenvolvedor versátil e capaz de criar soluções completas e eficientes.  ',
-      paragraph02:
-        'Com expertise na stack JavaScript focando em tecnologias como React e Next.js, posso desenvolver interfaces de usuário dinâmicas e responsivas, priorizando a experiência do usuário. Além disso, sou entusiasta do design, utilizando ferramentas como Tailwind CSS para criar interfaces visualmente atraentes e intuitivas.',
-      paragraph03:
-        'Com um olhar atento aos detalhes e uma abordagem orientada para soluções, estou preparado para enfrentar desafios e superar expectativas. Estou ansioso para colaborar em projetos inovadores e continuar a expandir meu conjunto de habilidades, transformando suas visões em realidade digital de sucesso. Entre em contato e vamos criar algo incrível juntos!',
-    },
+    description: [
+      {
+        id: uuid(),
+        paragraph:
+          'Olá! Sou um apaixonado desenvolvedor Front-End com experiência robusta em diversas tecnologias modernas da web. Minha jornada no mundo da programação começou com uma paixão pelo front-end, e ao longo dos anos, expandi meu conhecimento para abranger também o back-end, tornando-me um desenvolvedor versátil e capaz de criar soluções completas e eficientes.  ',
+      },
+      {
+        id: uuid(),
+        paragraph:
+          'Com expertise na stack JavaScript focando em tecnologias como React e Next.js, posso desenvolver interfaces de usuário dinâmicas e responsivas, priorizando a experiência do usuário. Além disso, sou entusiasta do design, utilizando ferramentas como Tailwind CSS para criar interfaces visualmente atraentes e intuitivas.',
+      },
+      {
+        id: uuid(),
+        paragraph:
+          'Com um olhar atento aos detalhes e uma abordagem orientada para soluções, estou preparado para enfrentar desafios e superar expectativas. Estou ansioso para colaborar em projetos inovadores e continuar a expandir meu conjunto de habilidades, transformando suas visões em realidade digital de sucesso. Entre em contato e vamos criar algo incrível juntos!',
+      },
+    ],
     projects: [
       {
         id: uuid(),
@@ -170,16 +176,10 @@ export const data: Data = {
         icon: SiPrisma,
       },
       {
-        name: 'PostgreSQL',
+        name: 'Git e Github',
         description:
-          'Experiência em design e gerenciamento de banco de dados relacional, otimização de consultas e manutenção de integridade dos dados',
-        icon: SiPostgresql,
-      },
-      {
-        name: 'Docker',
-        description:
-          'Habilidade em containerização de aplicações, garantindo ambientes de desenvolvimento consistentes e facilitando a implantação',
-        icon: FaDocker,
+          'Conhecimentos em versionamento de código, gerenciamento de repositórios, controle de versão, criação de branches, fusões e resolução de conflitos de código',
+        icon: FaGithub,
       },
     ],
   },
