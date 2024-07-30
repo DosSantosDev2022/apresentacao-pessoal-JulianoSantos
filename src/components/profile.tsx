@@ -36,7 +36,7 @@ export function Profile() {
                   className="font-normal text-sm text-blue-charcoal-200 flex gap-2 items-center"
                   href={link.url}
                 >
-                  <link.icon />
+                  <link.icon size={20} />
                   {link.linkName}
                 </a>
               </li>
