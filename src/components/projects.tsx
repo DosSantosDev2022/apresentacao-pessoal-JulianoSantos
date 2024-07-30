@@ -3,7 +3,7 @@ import { data } from '../data'
 
 export function Projects() {
   return (
-    <div className="w-full ">
+    <section className="w-full ">
       <div className="w-full mb-4 px-2 py-3">
         <h5 className=" text-3xl lg:text-4xl font-bold">
           Conheça os meus projetos
@@ -16,11 +16,14 @@ export function Projects() {
             key={project.id}
             className=" h-[410px] col-span-3 lg:col-span-1 rounded-lg shadow  bg-blue-charcoal-800"
           >
-            <a href={project.viewUrl}>
+            <a
+              href={project.viewUrl}
+              aria-label={`Link para acessar o preview do projeto ${project.name}`}
+            >
               <img
                 className="rounded-t-lg w-full h-[180px] "
                 src={project.coverImage}
-                alt=""
+                alt={`Imagem de capa para o projeto ${project.name}`}
               />
             </a>
             <div className="px-3 py-2 h-[236px]  flex flex-col justify-around">
@@ -32,6 +35,7 @@ export function Projects() {
               <a
                 target="_blank"
                 href={project.viewUrl}
+                aria-label={`Link para acessar os detalhes do projeto ${project.name}`}
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center  bg-blue-charcoal-900 rounded-lg hover:bg-blue-charcoal-950 focus:ring-4 focus:outline-none focus:ring-blue-charcoal-300 dark:focus:ring-blue-charcoal-800 duration-300"
               >
                 Ver mais
@@ -40,6 +44,6 @@ export function Projects() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

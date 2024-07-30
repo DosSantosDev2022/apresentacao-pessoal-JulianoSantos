@@ -3,42 +3,23 @@ import { Profile } from './components/profile'
 import { Projects } from './components/projects'
 import { Tecnologies } from './components/tecnologies'
 import { motion } from 'framer-motion'
+import { AnimationBase } from './lib/animations'
 
 export default function App() {
   return (
-    <main>
+    <>
       <div className="w-full  text-blue-charcoal-300">
         <div className="flex flex-col gap-8 w-full lg:w-[874px]  mx-auto ">
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 50 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div {...AnimationBase}>
             <Profile />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 100 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div {...AnimationBase}>
             <Content />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 100 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div {...AnimationBase}>
             <Tecnologies />
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 100 }}
-            transition={{ duration: 0.8 }}
-          >
+          <motion.div {...AnimationBase}>
             <Projects />
           </motion.div>
 
@@ -49,6 +30,6 @@ export default function App() {
           </footer>
         </div>
       </div>
-    </main>
+    </>
   )
 }

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 export function Tecnologies() {
   return (
     <>
-      <div className="w-full mb-4 px-2 py-3">
+      <section className="w-full mb-4 px-2 py-3">
         <h5 className="text-3xl lg:text-4xl font-bold">Minhas habilidades</h5>
 
         <div className="mt-6 p-4 lg:p-6 bg-blue-charcoal-800 rounded-md">
@@ -31,7 +31,7 @@ export function Tecnologies() {
             ))}
           </ul>
         </div>
-      </div>
+      </section>
     </>
   )
 }

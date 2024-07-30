@@ -70,21 +70,21 @@ export const data: Data = {
         'Olá! Sou um desenvolvedor Front-End apaixonado, com experiência em JavaScript, React e Next.js. Crio interfaces dinâmicas e responsivas e uso Tailwind CSS para designs atraentes.',
       links: [
         {
-          id: '001',
+          id: uuid(),
           linkName: 'DosSantosDev2022',
           url: 'https://github.com/DosSantosDev2022',
           icon: FaGithub,
         },
         {
-          id: '002',
+          id: uuid(),
           linkName: 'dossantosdev/',
           url: 'https://www.linkedin.com/in/dossantosdev/',
           icon: FaLinkedin,
         },
         {
-          id: '003',
+          id: uuid(),
           linkName: '32 seguidores',
-          url: 'instagram/julianosantosdev',
+          url: 'https://www.instagram.com/julianosantosdev/',
           icon: FaInstagramSquare,
         },
       ],
